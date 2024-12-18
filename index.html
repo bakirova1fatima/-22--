@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математика жана Компьютердик Технологиялар Факультети</title>
+    <style>
+        /* Общие стили */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f3fc; /* Жеңил фиолетовый фон */
+            text-align: center;
+        }
+
+        /* Шапка */
+        header {
+            background-color: #6a0dad; /* Коюу фиолетовый түс */
+            color: #fff;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        /* Основной раздел */
+        .hero {
+            background-color: #fff;
+            padding: 40px 20px;
+            margin: 20px auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            border-radius: 10px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            color: #6a0dad; /* Фиолетовый текст */
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #4b0082; /* Коюураак фиолетовый */
+        }
+
+        /* Навигационные кнопки */
+        .buttons {
+            margin: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            background-color: #6a0dad; /* Кнопка фону */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #4b0082; /* Коюу фиолетовый (ховерде) */
+        }
+
+        /* Подвал */
+        footer {
+            background-color: #6a0dad;
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* Скрытые разделы */
+        .section {
+            display: none;
+        }
+
+        /* Таблица */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #6a0dad; /* Коюу фиолетовый түс */
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f6fc; /* Жеңил фиолетовый */
+        }
+        tr:hover {
+            background-color: #e9e4f7; /* Ховер эффекти */
+        }
+        h1 {
+            background-color: #6a0dad; /* Коюу фиолетовый түс */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            // Скрыть все разделы
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Показать выбранный раздел
+            var selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+        }
+    </script>
+</head>
+<body onload="showSection('index')">
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="logo"></div>
+        <h1>Математика жана Компьютердик Технологиялар Факультети</h1>
+    </header>
+
+    <!-- Основная часть -->
+    <main>
+        <!-- Навигация -->
+        <nav class="buttons">
+            <button onclick="showSection('index')">Главная</button>
+            <button onclick="showSection('tarikhy')">Тарыхы</button>
+            <button onclick="showSection('kafedra')">Факультеттин структурасы</button>
+            <button onclick="showSection('bakalavr')">Бакалавр</button>
+            <button onclick="showSection('abiturient')">Абитуриенттер үчүн</button>
+        </nav>
+
+        <!-- Разделы -->
+        <section id="index" class="section">
+            <h1>Добро пожаловать на факультет!</h1>
+            <p>На этой странице можно найти информацию о факультете и его деятельности.</p>
+        </section>
+
+        <section id="tarikhy" class="section">
+            <h1>Факультеттин тарыхы</h1>
+            <p>Факультеттин девизи: - «Татыктуу тарбия, терең жана бекем билим берүү»</p>
+            <p>Математика жана компьютердик технологиялар факультеттинин тарыхы</p>
+            <p>Ош жогорку колледжи 1999–жылы «Биология» адистигине лицензия алып, «Педагогика» факультетинин курамында 42 студент кабыл алынган...</p>
+            <a href="javascript:void(0);" onclick="showSection('index')">Башкы бетке кайтуу</a>
+        </section>
+
+        <section id="kafedra" class="section">
+            <h1>Факультеттин жетекчилери</h1>
+            <table>
+                <tr>
+                    <th>№</th>
+                    <th>Кызматы</th>
+                    <th>Аты-жөнү</th>
+                    <th>Тел. номер</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Декан</td>
+                    <td>Исакова Венера Токтосуновна</td>
+                    <td>996 773 549 477</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Декандын окуу иштери боюнча орун басары</td>
+                    <td>Джумабаева Акылай Нооманжоновна</td>
+                    <td>996 555 038 882</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Декандын илимий иштери боюнча орун басары</td>
+                    <td>Ырысбаева Айсырга Алмаматовна</td>
+                    <td>996 772 621 772</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Декандын тарбия иштери боюнча орун басары</td>
+                    <td>Момунова Нурайым Дүйшөналиевна</td>
+                    <td>996 770 493 148</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Математика жана менеджмент кафедрасынын жетекчиси</td>
+                    <td>Алиева Жаркынай Анарбаевна</td>
+                    <td>996 777 201 071</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Информатика жана жаңы маалыматтар технологиялар кафедрасынын жетекчиси</td>
+                    <td>Турдубаева Кандалаткан Ташполотовна</td>
+                    <td>996 558 345 456</td>
+                </tr>
+            </table>
+            <a href="javascript:void(0);" onclick="showSection('index')">Башкы бетке кайтуу</a>
+        </section>
+
+        <section id="bakalavr" class="section">
+            <h1>Бакалавр программасы</h1>
+            <p>Биз бакалаврларга математика, программалоо жана IT тармагында билим берүү курстарын сунуштайбыз.</p>
+            <a href="javascript:void(0);" onclick="showSection('index')">Башкы бетке кайтуу</a>
+        </section>
+
+        <section id="abiturient" class="section">
+            <h1>Абитуриенттер үчүн маалымат</h1>
+            <p>Абитуриенттерге тапшыруу эрежелери жана талап кылынган документтер тууралуу маалымат менен бул беттен тааныша аласыз.</p>
+            <a href="javascript:void(0);" onclick="showSection('index')">Башкы бетке кайтуу</a>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>©️ 2024 Математика жана Компьютердик Технологиялар Факультети. Бардык укуктар корголгон.</p>
+    </footer>
+</body>
+</html>
